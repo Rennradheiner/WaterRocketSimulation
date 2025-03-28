@@ -1,0 +1,16 @@
+###############################################################################
+# Bazel now uses Bzlmod by default to manage external dependencies.
+# Please consider migrating your external dependencies from WORKSPACE to MODULE.bazel.
+#
+# For more details, please check https://github.com/bazelbuild/bazel/issues/18958
+###############################################################################
+
+bazel_dep(name = "hedron_compile_commands", dev_dependency = True)
+HEDRON_COMPILE_COMMANDS_TAG="4f28899228fb3ad0126897876f147ca15026151e"
+HEDRON_COMPILE_COMMANDS_INTEGRITY="sha256-yAKektowLwoy/Q1AWTWMhle1y4JigAC3teJZxz+RiC0="
+archive_override(
+    module_name = "hedron_compile_commands",
+    strip_prefix = "bazel-compile-commands-extractor-"+HEDRON_COMPILE_COMMANDS_TAG,
+    urls = ["https://github.com/hedronvision/bazel-compile-commands/archive/"+HEDRON_COMPILE_COMMANDS_TAG+".zip"],
+    integrity = HEDRON_COMPILE_COMMANDS_INTEGRITY,
+)

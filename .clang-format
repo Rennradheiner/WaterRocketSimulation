@@ -1,0 +1,155 @@
+# see : https://releases.llvm.org/16.0.0/tools/clang/docs/ClangFormatStyleOptions.html
+---
+Language: Cpp
+Standard: c++20
+DisableFormat: false
+# Indentation
+AccessModifierOffset: -2
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 4
+IndentWidth: 4
+IndentAccessModifiers: false
+IndentCaseLabels: false
+IndentExternBlock: NoIndent
+IndentWrappedFunctionNames: false
+IndentPPDirectives: None
+TabWidth: 4
+UseTab: Never
+# Includes
+IncludeBlocks: Regroup
+IncludeIsMainRegex: '(_test|\.t)?$'
+IncludeIsMainSourceRegex: ""
+SortIncludes: CaseInsensitive
+# Whitespace
+InsertNewlineAtEOF: true
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: LogicalBlock
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+SpaceAfterCStyleCast: false
+SpaceAfterTemplateKeyword: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: false
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 1
+SpacesInAngles: false
+SpacesInContainerLiterals: true
+SpacesInCStyleCastParentheses: false
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: -1
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SeparateDefinitionBlocks: Always
+# Macro definitions
+ForEachMacros: [foreach, Q_FOREACH, BOOST_FOREACH]
+StatementAttributeLikeMacros: []
+StatementMacros: []
+TypenameMacros: []
+WhitespaceSensitiveMacros: []
+# Rest
+AlignAfterOpenBracket: AlwaysBreak
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+  AlignCompound: false
+AlignConsecutiveDeclarations: false
+AlignEscapedNewlines: Left
+AlignOperands: true
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 0
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: All
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+AlwaysBreakTemplateDeclarations: true
+BinPackArguments: true
+BinPackParameters: true
+BraceWrapping:
+  AfterClass: true
+  AfterCaseLabel: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false
+BreakAfterAttributes: Leave
+BreakBeforeBinaryOperators: None
+BreakBeforeBraces: Custom
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeComma
+BreakStringLiterals: true
+ColumnLimit: 120
+CommentPragmas: "^ IWYU pragma:"
+Cpp11BracedListStyle: true
+DerivePointerAlignment: false
+ExperimentalAutoDetectBinPacking: false
+FixNamespaceComments: true
+InsertBraces: false
+IntegerLiteralSeparator:
+  Binary: 0
+  Decimal: 0
+  Hex: 0
+MacroBlockBegin: ""
+MacroBlockEnd: ""
+NamespaceIndentation: None
+QualifierAlignment: Custom
+QualifierOrder: ['static', 'inline', 'friend', 'constexpr', 'type', 'const', 'volatile', 'restrict']
+PackConstructorInitializers: BinPack
+PenaltyBreakBeforeFirstCallParameter: 19
+PenaltyBreakComment: 1000
+PenaltyBreakFirstLessLess: 120
+PenaltyBreakString: 1000
+PenaltyExcessCharacter: 1000000
+PenaltyReturnTypeOnItsOwnLine: 1001
+PointerAlignment: Left
+ReferenceAlignment: Left
+ReflowComments: true
+SortUsingDeclarations: true
+
+---
+Language: ObjC
+BraceWrapping:
+  AfterObjCDeclaration: true
+ObjCBlockIndentWidth: 2
+ObjCSpaceAfterProperty: false
+ObjCSpaceBeforeProtocolList: true
+
+---
+Language: Proto
+BasedOnStyle: Google
+ReflowComments: false
+AlignTrailingComments: true
+AlignConsecutiveAssignments: true
+
+---
+Language: JavaScript
+JavaScriptQuotes: Leave
+JavaScriptWrapImports: true
+
+---
+Language: Java
+BreakAfterJavaFieldAnnotations: false
+
+---
+Language: Json
