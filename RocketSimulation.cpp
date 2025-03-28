@@ -1,8 +1,7 @@
-#include <Rocket.hpp>
-
 #include <cstdlib>
 #include <future>
 #include <iostream>
+#include <Rocket.hpp>
 #include <thread>
 #include <tuple>
 #include <vector>
@@ -140,34 +139,6 @@ int main()
             std::cout << std::endl;
         }
     }
-
-    // std::vector<std::future<std::tuple<float, float>>> futures;
-    // std::vector<std::unique_ptr<std::function<std::tuple<float, float>()>>>
-    // tasks; // Container to hold unique_ptrs
-
-    // for (int i = 1; i < ITERATIONS; i++)
-    // {
-    // 	float const startWaterVolume{BOTTLE_VOLUME_L / ITERATIONS * i};
-    // 	auto simulate = std::make_unique<std::function<std::tuple<float,
-    // float>()>>([=]() {
-    //         return rocketSimulate(START_PRESSURE_BAR, startWaterVolume,
-    //         NOZZLE_DIAMETER_MM, BOTTLE_VOLUME_L, EMPTY_ROCKET_MASS_KG,
-    //         TIME_STEP, false, false);
-    //     });
-
-    // 	futures.push_back(std::async(std::launch::async, *simulate));
-    // 	tasks.push_back(std::move(simulate));
-    // }
-
-    // for (auto& future : futures)
-    // {
-    // 	auto [maxAltitude, startWaterVolume]  = future.get();
-    // 	if (maxAltitude > dragIndicatorMaxAltitude)
-    // 	{
-    // 		dragIndicatorMaxAltitude = maxAltitude;
-    // 		dragIndicatorStartWaterVolume = startWaterVolume;
-    // 	}
-    // }
 
     std::cout << "*********************************************************" << std::endl;
     std::cout << "* Optimized results                                     *" << std::endl;
