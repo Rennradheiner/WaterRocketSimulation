@@ -3,7 +3,9 @@
 class Rocket
 {
   public:
-    Rocket(float pressure, float waterVolume_l, float nozzleDiameter_mm, float bottleVolume_l, float emptyRocketMass);
+    Rocket(
+        float pressure, float waterVolume_l, float nozzleDiameter_mm, float bottleVolume_l, float emptyRocketMass,
+        float rocketDiameter_mm, float dragCoefficient);
 
     void step(float const dt);
 
@@ -20,6 +22,8 @@ class Rocket
   private:
     float calcNozzleSpeed();
 
+    float calcAeroDrag(float const speed);
+
     void updateWaterVolume(float const dt);
 
     void updatePressure();
@@ -31,6 +35,8 @@ class Rocket
     float const m_nozzleDiameter_mm;
     float const m_bottleVolume_m3;
     float const m_nozzleArea;
+    float const m_frontalArea;
+    float const m_dragCoefficient;
     float m_rocketSpeed_ms;
     float m_previousRocketSpeed_ms;
     float m_rocketAltitude_m;
@@ -50,4 +56,5 @@ class Rocket
     static constexpr float BAR_2_PASCAL{100000.0f};
     static constexpr float LITER_2_CUBICMETERS{0.001f};
     static constexpr float HEAT_CAPACITY_RATIO_AIR{1.4f};
+    static constexpr float AIR_DENSITY{1.225f}; // kg/m^3
 };
