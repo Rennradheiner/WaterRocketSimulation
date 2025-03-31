@@ -24,4 +24,5 @@ cc_library(
     hdrs = ["Rocket.hpp"],
     copts = ["-D_USE_MATH_DEFINES"],
     cxxopts = ["-std:c++20"],
+    visibility = ["//visibility:public"],
 )

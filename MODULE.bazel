@@ -14,3 +14,5 @@ archive_override(
     urls = ["https://github.com/hedronvision/bazel-compile-commands/archive/"+HEDRON_COMPILE_COMMANDS_TAG+".zip"],
     integrity = HEDRON_COMPILE_COMMANDS_INTEGRITY,
 )
+
+bazel_dep(name = "googletest", version = "1.16.0")
