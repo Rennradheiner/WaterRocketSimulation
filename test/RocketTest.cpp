@@ -32,5 +32,6 @@ class RocketTest : public ::testing::Test
 // Test case for initial state
 TEST_F(RocketTest, InitialState)
 {
-    EXPECT_EQ(m_rocket.getAltitude(), 0);
+    EXPECT_EQ(m_rocket.getAltitude(), 0.0f);
+    EXPECT_EQ(m_rocket.getMaxAltitude(), 0.0f);
 }
